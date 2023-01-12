@@ -18,8 +18,8 @@ class CreateKasMasukTable extends Migration
             $table->char('kode_akun',10);
             $table->string('sumber',25);
             $table->date('tgl_kas_masuk');
-            $table->float('debit')->nullable();
-            $table->float('kredit')->nullable();
+            $table->float('debit',12)->nullable();
+            $table->float('kredit',12)->nullable();
             $table->string('keterangan',50);
             $table->timestamps();
         });
