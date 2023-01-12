@@ -19,7 +19,7 @@ class CreateKasMasukTable extends Migration
             $table->string('sumber',25);
             $table->date('tgl_kas_masuk');
             $table->float('debit')->nullable();
-            $table->float('kredit');
+            $table->float('kredit')->nullable();
             $table->string('keterangan',50);
             $table->timestamps();
         });
