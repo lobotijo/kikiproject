@@ -1,4 +1,9 @@
 @extends('dashboard')
+
+
+@section('content')
+    
+@extends('dashboard')
 @section('content')
 
 
@@ -9,9 +14,9 @@
       <div class="card">
      
         <div class="card-body">
-          <p class="card-title">Kas Masuk</p>
-          <a href="{{route('kasm.create')}}" class="btn btn-primary btn-rounded text-white btn-fw float-right">
-              Input
+          <p class="card-title">Kas Keluar</p>
+          <a href="{{route('kask.create')}}" class="btn btn-primary btn-rounded text-white btn-fw float-right">
+              Create
           </a>
           
           <div class="table-responsive">
@@ -19,25 +24,25 @@
               <thead>
                 <tr>
                     <th>Kode Akun</th>
-                    <th>Sumber</th>
+                    <th>Pengeluaran</th>
                     <th>Tgl Kas Masuk</th>
                     <th>Debit</th>
                     <th>Kredit</th>
-                    {{-- <th>Saldo</th> --}}
+                    <th>Saldo</th>
                     <th>Keterangan</th>
                     <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                
-                  @foreach ($kasm as $kas)
+                  @foreach ($kask as $kas)
                   <tr>
                     <td>{{$kas->kode_akun}}</td>
-                    <td>{{$kas->sumber}}</td>
-                    <td>{{$kas->tgl_kas_masuk}}</td>
+                    <td>{{$kas->nama_transaksi}}</td>
+                    <td>{{$kas->tgl_kas_keluar}}</td>
                     <td>{{$kas->debit}}</td>
                     <td>{{$kas->kredit}}</td>
-                    {{-- <td>{{$kas->saldo}}</td> --}}
+                    <td>{{$kas->saldo}}</td>
                     <td>{{$kas->keterangan}}</td>
                     <td>
                       <div class="align-center">

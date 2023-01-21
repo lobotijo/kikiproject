@@ -43,7 +43,8 @@ class KasMasukController extends Controller
                 'kode_akun'=>$request->kode_akun,
                 'sumber'=>$request->sumber,
                 'tgl_kas_masuk'=>$request->tgl_kas_masuk,
-                'debit'=>$request->kredit,
+                'debit'=>$request->debit,
+                // 'saldo'=>(double)$request->debit-(double)$request->kredit,
                 'keterangan'=>$request->keterangan,
             ]);
             return redirect()->route('kasm.index');
